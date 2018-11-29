@@ -6,8 +6,8 @@ export default class Header extends Component {
         return (
             <div className="HeaderBody" >
                 <div className="HeaderLeft" >
-                    <img className="HeaderLogo" src={require('../../Assets/LogoOnly.JPG')}/>
-                    <h2>Ignite Studios</h2>
+                    <img className="HeaderLogo" src={require('../../Assets/LogoOnly.png')}/>
+                    <img className="HeaderText" src={require('../../Assets/LogoTitle.png')}/>
                 </div>
                 <div className="HeaderRight">
                         <h3>Home</h3>

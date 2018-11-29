@@ -1,9 +1,12 @@
 .HeaderBody {
     height: 75px;
+    width: 100vw;
     background: rgb(76, 76, 86);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 .HeaderLeft {
@@ -15,6 +18,12 @@
 .HeaderLogo {
     height: 60px;
     width: auto;
+}
+
+.HeaderText {
+    height: 30px;
+    width: auto;
+    margin-left: 15px;
 }
 
 .HeaderLeft h2 {
@@ -31,5 +40,13 @@
 }
 
 .HeaderRight h3 {
-    color: white;
+    background: -webkit-linear-gradient(rgb(160, 110, 30), rgb(240, 220, 115), rgb(160, 110, 30));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.HeaderRight h3:hover {
+    cursor: pointer;
+    background: -webkit-linear-gradient(rgb(160, 110, 30), rgb(240, 220, 115), rgb(160, 110, 30));
+    -webkit-text-fill-color: white;
 }
