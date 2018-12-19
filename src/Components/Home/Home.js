@@ -21,6 +21,7 @@ const styles = theme => ({
             width: '100vw',
             marginTop: 25,
             marginBottom: 25,
+            padding: 20
         },
     },
     text: {
