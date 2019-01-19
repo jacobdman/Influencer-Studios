@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import { withStyles, MuiThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Theme from './theme';
-import Header from './Components/Header/Header'
-import Routes from './routes';
+import StudioTheme from './StudioTheme';
+import Routes from './routes/Router';
 import 'typeface-roboto';
 
 const styles = theme => ({
+  root: {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#1b1b1b',
+  },
+  routeWrapper: {
+    marginTop: 48,
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
 });
-
 
 class App extends Component {
   render() {
+    const { classes } = this.props;
     return (
-      <Theme>
-        <div>
-          <CssBaseline />
-          <Header />
-          <div>
-            {Routes}
+      <div className={classes.root}>
+        <StudioTheme>
+          <div className={classes.routeWrapper}>
+            <Routes />
           </div>
-        </div>
-      </Theme>
+        </StudioTheme>
+      </div>
     );
   }
 }
