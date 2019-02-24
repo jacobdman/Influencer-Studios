@@ -18,6 +18,7 @@ const styles = theme => ({
     },
   },
   text: {
+    color: '#fff',
     fontSize: 18,
   },
 });
@@ -40,9 +41,11 @@ class Home extends Component {
         </Typography>
         <br />
         <br />
-        (801) 999-8249
-        <br />
-        1005 S 300 W, Salt Lake City, UT 84101
+        <Typography className={classes.text}>
+          (801) 999-8249
+          <br />
+          1005 S 300 W, Salt Lake City, UT 84101
+        </Typography>
       </Paper>
     );
   }

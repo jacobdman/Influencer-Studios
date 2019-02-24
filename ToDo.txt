@@ -6,6 +6,11 @@ Studio specs--dimension pic, info, Lighting Grid
 Testimonials-- (we'll have to gather all new)
 Hair and makeup--link to my stinky Wix site
 
+
+https://www.npmjs.com/package/react-google-calendar-api
+
+https://marmelab.com/react-admin/index.html
+
 STUDIOS
 
 Background - 1b1b1b

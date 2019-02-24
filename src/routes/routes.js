@@ -3,6 +3,7 @@ import Gallery from '../Components/Gallery/Gallery';
 import Examples from '../Components/Examples/Examples';
 import About from '../Components/About/About';
 import Specs from '../Components/Specs/Specs';
+import Calendar from '../Components/Calendar/Calendar';
 import Testimonials from '../Components/Testimonials/Testimonials';
 import MakeItUp from '../Components/MakeItUp/MakeItUp';
 
@@ -40,6 +41,11 @@ const routes = [
   {
     path: '/makeitup',
     component: MakeItUp,
+    exact: true,
+  },
+  {
+    path: '/calendar',
+    component: Calendar,
     exact: true,
   },
 ];

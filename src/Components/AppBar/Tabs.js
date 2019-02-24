@@ -45,6 +45,10 @@ class TabRouter extends Component {
       //   path: `/testimonials`,
       // },
       {
+        label: 'CALENDAR',
+        path: `/calendar`,
+      },
+      {
         label: 'HAIR/MAKE-UP',
         path: `/makeitup`,
       },

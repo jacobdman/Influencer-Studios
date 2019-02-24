@@ -15,18 +15,21 @@ const styles = theme => ({
     zIndex: theme.zIndex.appBar,
   },
   logo: {
+    height: 38,
     display: 'flex',
     backgroundColor: theme.palette.background.paper,
-    padding: 5,
+    padding: 3,
     boxSizing: 'border-box',
     borderRadius: 5,
+    marginRight: 10,
+    // margin: 10,
   },
   logoImg: {
-    height: 40,
+    height: '100%',
     width: 'auto',
   },
   nameImg: {
-    height: 40,
+    height: '100%',
     width: 'auto',
     marginLeft: 10,
     [theme.breakpoints.down('md')]: {
