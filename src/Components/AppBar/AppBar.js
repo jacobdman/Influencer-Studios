@@ -13,25 +13,22 @@ const styles = theme => ({
     position: 'fixed',
     top: 0,
     zIndex: theme.zIndex.appBar,
+    height: 50,
   },
   logo: {
-    height: 38,
+    height: '100%',
     display: 'flex',
-    backgroundColor: theme.palette.background.paper,
+    alignItems: 'center',
     padding: 3,
     boxSizing: 'border-box',
-    borderRadius: 5,
-    marginRight: 10,
-    // margin: 10,
   },
   logoImg: {
     height: '100%',
     width: 'auto',
   },
   nameImg: {
-    height: '100%',
+    height: '75%',
     width: 'auto',
-    marginLeft: 10,
     [theme.breakpoints.down('md')]: {
       display: 'none',
     },
@@ -48,12 +45,12 @@ class StudioAppBar extends Component {
           <img
             className={classes.logoImg}
             alt="Logo"
-            src={require('../../Assets/Logo.png')}
+            src={require('../../Assets/Logo.svg')}
           />
           <img
             className={classes.nameImg}
             alt="Name"
-            src={require('../../Assets/Name.png')}
+            src={require('../../Assets/Logo_Name.svg')}
           />
         </div>
       </AppBar>

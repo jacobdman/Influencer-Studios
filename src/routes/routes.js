@@ -6,6 +6,8 @@ import Specs from '../Components/Specs/Specs';
 import Calendar from '../Components/Calendar/Calendar';
 import Testimonials from '../Components/Testimonials/Testimonials';
 import MakeItUp from '../Components/MakeItUp/MakeItUp';
+import SoundStage from '../Components/Calendar/SoundStage';
+import AudioRecordingStudio from '../Components/Calendar/AudioRecordingStudio';
 
 const routes = [
   {
@@ -18,34 +20,44 @@ const routes = [
     component: Gallery,
     exact: true,
   },
+  // {
+  //   path: '/examples',
+  //   component: Examples,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/about',
+  //   component: About,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/specs',
+  //   component: Specs,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/testimonials',
+  //   component: Testimonials,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/makeitup',
+  //   component: MakeItUp,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/calendar',
+  //   component: Calendar,
+  //   exact: true,
+  // },
   {
-    path: '/examples',
-    component: Examples,
+    path: '/audiostudio',
+    component: AudioRecordingStudio,
     exact: true,
   },
   {
-    path: '/about',
-    component: About,
-    exact: true,
-  },
-  {
-    path: '/specs',
-    component: Specs,
-    exact: true,
-  },
-  {
-    path: '/testimonials',
-    component: Testimonials,
-    exact: true,
-  },
-  {
-    path: '/makeitup',
-    component: MakeItUp,
-    exact: true,
-  },
-  {
-    path: '/calendar',
-    component: Calendar,
+    path: '/soundstage',
+    component: SoundStage,
     exact: true,
   },
 ];

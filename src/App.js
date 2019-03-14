@@ -12,10 +12,20 @@ const styles = theme => ({
     backgroundColor: '#1b1b1b',
   },
   routeWrapper: {
-    marginTop: 48,
+    marginTop: 65,
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center',
+  },
+  '@global': {
+    '*::-webkit-scrollbar': {
+      width: '0.4em',
+    },
+    '*::-webkit-scrollbar-thumb': {
+      backgroundColor: '#D4A741',
+      borderRadius: 5,
+    },
   },
 });
 

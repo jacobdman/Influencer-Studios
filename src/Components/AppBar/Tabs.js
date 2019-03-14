@@ -10,6 +10,11 @@ const styles = theme => ({
     width: '100%',
     marginLeft: 10,
     marginRight: 10,
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+      marginLeft: 0,
+      marginRight: 0,
+    },
   },
   tab: {
     color: theme.palette.primary.contrastText,
@@ -28,10 +33,10 @@ class TabRouter extends Component {
         label: 'HOME',
         path: `/`,
       },
-      // {
-      //   label: 'GALLERY',
-      //   path: `/gallery`,
-      // },
+      {
+        label: 'GALLERY',
+        path: `/gallery`,
+      },
       // {
       //   label: 'CREATED IN STUDIO',
       //   path: `/examples`,
@@ -45,13 +50,17 @@ class TabRouter extends Component {
       //   path: `/testimonials`,
       // },
       {
-        label: 'CALENDAR',
-        path: `/calendar`,
+        label: 'Sound Stage',
+        path: `/soundstage`,
       },
       {
-        label: 'HAIR/MAKE-UP',
-        path: `/makeitup`,
+        label: 'Audio Recording Studio',
+        path: `/audiostudio`,
       },
+      // {
+      //   label: 'HAIR/MAKE-UP',
+      //   path: `/makeitup`,
+      // },
     ];
     return (
       <Tabs
