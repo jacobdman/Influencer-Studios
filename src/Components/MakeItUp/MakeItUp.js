@@ -4,14 +4,10 @@ import PropTypes from 'prop-types';
 
 const styles = theme => ({
   iframe: {
-    width: '90vw',
-    height: '100vh',
-    marginTop: -52,
-    marginBottom: 4,
-    borderColor: theme.palette.secondary.main,
-    [theme.breakpoints.down('md')]: {
-      width: '100vw',
-    },
+    width: '100vw',
+    height: '93vh',
+    marginTop: -15,
+    borderColor: theme.palette.primary.main,
   },
 });
 

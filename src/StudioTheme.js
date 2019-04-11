@@ -5,30 +5,40 @@ import AppBar from './Components/AppBar/AppBar';
 
 const theme = createMuiTheme({
   typography: {
-    color: 'white',
+    color: '#fff',
+    useNextVariants: true,
   },
   palette: {
+    type: 'light',
     background: {
-      default: '#1b1b1b',
-      paper: '#424242',
+      // '#000',
+      // '#1b1b1b',
+      // '#424242',
+      // '#6d6d6d',
+      // '#9b9b9b',
+      // '#ccc',
+      // '#fff',
+      darkGrey: '#1b1b1b',
+      default: '#eee',
+      // paper: '#6d6d6d',
     },
     primary: {
-      main: '#5e0e29',
+      main: '#D4A741',
     },
     secondary: {
-      main: '#D4A741',
+      main: '#5e0e29',
     },
   },
   zIndex: {
     appBar: 1100,
   },
   button: {
-    // '&': {
-    //   background: '#74CCC6',
-    //   '&:hover': {
-    //     background: '#2289D9',
-    //   },
-    // },
+    '&': {
+      background: '#5e0e29',
+      '&:hover': {
+        background: '#D4A741',
+      },
+    },
   },
   link: {
     // textDecoration: 'none',

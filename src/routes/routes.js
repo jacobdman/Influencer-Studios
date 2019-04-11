@@ -1,7 +1,9 @@
 import Home from '../Components/Home/Home';
 import Gallery from '../Components/Gallery/Gallery';
+import Contact from '../Components/Contact/Contact';
 import Examples from '../Components/Examples/Examples';
-import About from '../Components/About/About';
+import Team from '../Components/About/Team';
+import Studio from '../Components/About/Studio';
 import Specs from '../Components/Specs/Specs';
 import Calendar from '../Components/Calendar/Calendar';
 import Testimonials from '../Components/Testimonials/Testimonials';
@@ -36,28 +38,18 @@ const routes = [
   //   exact: true,
   // },
   // {
-  //   path: '/testimonials',
-  //   component: Testimonials,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/makeitup',
-  //   component: MakeItUp,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/calendar',
-  //   component: Calendar,
+  //   path: '/about/team',
+  //   component: Team,
   //   exact: true,
   // },
   {
-    path: '/audiostudio',
-    component: AudioRecordingStudio,
+    path: '/makeitup',
+    component: MakeItUp,
     exact: true,
   },
   {
-    path: '/soundstage',
-    component: SoundStage,
+    path: '/contact',
+    component: Contact,
     exact: true,
   },
 ];

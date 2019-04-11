@@ -7,19 +7,16 @@ import Tab from '@material-ui/core/Tab';
 
 const styles = theme => ({
   tabs: {
-    width: '100%',
-    marginLeft: 10,
-    marginRight: 10,
+    width: '75%',
     [theme.breakpoints.down('md')]: {
       width: '90%',
-      marginLeft: 0,
-      marginRight: 0,
     },
+    color: '#fff',
   },
   tab: {
-    color: theme.palette.primary.contrastText,
+    color: theme.typography.color,
     '& a': {
-      color: theme.palette.secondary,
+      color: theme.palette.primary,
     },
   },
 });
@@ -32,53 +29,61 @@ class TabRouter extends Component {
       {
         label: 'HOME',
         path: `/`,
+        component: Link,
       },
       {
         label: 'GALLERY',
         path: `/gallery`,
-      },
-      // {
-      //   label: 'CREATED IN STUDIO',
-      //   path: `/examples`,
-      // },
-      // {
-      //   label: 'STUDIO SPECS',
-      //   path: `/specs`,
-      // },
-      // {
-      //   label: 'TESTIMONIALS',
-      //   path: `/testimonials`,
-      // },
-      {
-        label: 'Sound Stage',
-        path: `/soundstage`,
+        component: Link,
       },
       {
-        label: 'Audio Recording Studio',
-        path: `/audiostudio`,
+        label: 'WHAT WE DO',
+        path: `/about/studio`,
+        component: Link,
       },
-      // {
-      //   label: 'HAIR/MAKE-UP',
-      //   path: `/makeitup`,
-      // },
+      {
+        label: 'STUDIO SPECS',
+        path: `/specs`,
+        component: Link,
+      },
+      {
+        label: 'TESTIMONIALS',
+        path: `/testimonials`,
+        component: Link,
+      },
+      {
+        label: 'CONTACT',
+        path: `/contact`,
+        component: Link,
+      },
+      {
+        label: 'OUR TEAM',
+        path: `http://www.theshutterbrigade.com/`,
+        component: 'a',
+      },
+      {
+        label: 'HAIR/MAKE-UP',
+        path: `https://www.makeitupbykrista.com/`,
+        component: 'a',
+      },
     ];
     return (
       <Tabs
         value={pathname}
         className={classes.tabs}
-        indicatorColor="secondary"
-        textColor="secondary"
-        scrollable
-        // scrollButtons="off"
+        indicatorColor="primary"
+        textColor="primary"
+        variant="scrollable"
       >
-        {tabs.map(({ label, path }) => (
+        {tabs.map(({ label, path, component }) => (
           <Tab
             key={label}
             value={path}
             label={label}
             className={classes.tab}
-            component={Link}
+            component={component}
             to={path}
+            href={path}
           />
         ))}
       </Tabs>

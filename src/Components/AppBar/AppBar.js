@@ -14,6 +14,7 @@ const styles = theme => ({
     top: 0,
     zIndex: theme.zIndex.appBar,
     height: 50,
+    backgroundColor: theme.palette.background.darkGrey,
   },
   logo: {
     height: '100%',
@@ -39,7 +40,7 @@ class StudioAppBar extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="static" color="primary" className={classes.appBar}>
+      <AppBar position="static" className={classes.appBar}>
         <Tabs handleClick={this.handleClick} />
         <div className={classes.logo}>
           <img

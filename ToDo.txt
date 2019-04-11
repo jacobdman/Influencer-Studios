@@ -1,21 +1,19 @@
-Homepage--Headline/description, interior picture, contact info (want to help me get a google number so they don't have my personal number?)
+Homepage--Headline/description, interior picture, contact info
 Studio Gallery--Interior pics
-Created in our Studio--vids/pics/other grabs from StudioTen05 site
-What we do:  teaser about social media program we're about to roll out to help you create and boost your platform
+What we do:  teaser about social media program we're about to roll out to help you create and boost your platform, vids/pics/other grabs from StudioTen05 site
 Studio specs--dimension pic, info, Lighting Grid
 Testimonials-- (we'll have to gather all new)
+Calenders tab with both room calendars <<<< HIDE FOR NOW
+Contact - phone, address, email, map, 
+About Us - Short team bios and links to individual sites. 
 Hair and makeup--link to my stinky Wix site
+
+
+make header black.
+background white. light theme.
+Gold primary color. Red secondary (border on photos?)
 
 
 https://www.npmjs.com/package/react-google-calendar-api
 
 https://marmelab.com/react-admin/index.html
-
-STUDIOS
-
-Background - 1b1b1b
-Paper - 424242
-
-Primary - 5e0e29
-Secondary - b2802c
-Tertiary - ecda82

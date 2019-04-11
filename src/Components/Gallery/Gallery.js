@@ -49,6 +49,12 @@ const styles = theme => ({
       cursor: 'pointer',
     },
   },
+  frame: {
+    border: '3px solid #5e0e29',
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '100%',
+  },
 });
 
 const tileData = [
@@ -209,7 +215,12 @@ class Gallery extends Component {
                 cols={tile.cols || 1}
                 onClick={() => this.openImageDialog(tile)}
               >
-                <img src={tile.img} alt={tile.title} />
+                <div
+                  className={classes.frame}
+                  style={{
+                    backgroundImage: `url(${tile.img})`,
+                  }}
+                />
               </GridListTile>
             ))}
           </GridList>

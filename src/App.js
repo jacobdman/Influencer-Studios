@@ -9,7 +9,6 @@ const styles = theme => ({
   root: {
     width: '100%',
     height: '100%',
-    backgroundColor: '#1b1b1b',
   },
   routeWrapper: {
     marginTop: 65,
