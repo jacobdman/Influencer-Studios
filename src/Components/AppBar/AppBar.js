@@ -7,17 +7,17 @@ import Tabs from './Tabs';
 
 const styles = theme => ({
   appBar: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
     position: 'fixed',
     top: 0,
     zIndex: theme.zIndex.appBar,
-    height: 50,
+    height: 100,
     backgroundColor: theme.palette.background.darkGrey,
   },
   logo: {
-    height: '100%',
+    height: 50,
     display: 'flex',
     alignItems: 'center',
     padding: 3,
@@ -31,7 +31,7 @@ const styles = theme => ({
     height: '75%',
     width: 'auto',
     [theme.breakpoints.down('md')]: {
-      display: 'none',
+      height: '60%',
     },
   },
 });
@@ -41,18 +41,22 @@ class StudioAppBar extends Component {
     const { classes } = this.props;
     return (
       <AppBar position="static" className={classes.appBar}>
-        <Tabs handleClick={this.handleClick} />
-        <div className={classes.logo}>
-          <img
-            className={classes.logoImg}
-            alt="Logo"
-            src={require('../../Assets/Logo.svg')}
-          />
-          <img
-            className={classes.nameImg}
-            alt="Name"
-            src={require('../../Assets/Logo_Name.svg')}
-          />
+        <div>
+          <div className={classes.logo}>
+            <img
+              className={classes.logoImg}
+              alt="Logo"
+              src={require('../../Assets/Logo.svg')}
+            />
+            <img
+              className={classes.nameImg}
+              alt="Name"
+              src={require('../../Assets/Logo_Name.svg')}
+            />
+          </div>
+        </div>
+        <div style={{ width: '100%' }}>
+          <Tabs handleClick={this.handleClick} />
         </div>
       </AppBar>
     );

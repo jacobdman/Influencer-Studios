@@ -7,17 +7,21 @@ import Tab from '@material-ui/core/Tab';
 
 const styles = theme => ({
   tabs: {
-    width: '75%',
-    [theme.breakpoints.down('md')]: {
-      width: '90%',
-    },
+    width: '100%',
+    padding: '0 30px',
     color: '#fff',
   },
   tab: {
+    padding: 0,
     color: theme.typography.color,
     '& a': {
       color: theme.palette.primary,
     },
+    '& span': {
+      padding: '0 3px',
+    },
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 });
 
