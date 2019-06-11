@@ -22,6 +22,7 @@ const styles = theme => ({
   wrapper: {
     display: 'flex',
     alignItems: 'center',
+    margin: '30px 0',
     justifyContent: 'space-between',
     [theme.breakpoints.down('md')]: {
       flexDirection: 'column',
@@ -37,6 +38,33 @@ const styles = theme => ({
       height: 1,
     },
   },
+  mapWrapper: {
+    margin: '0 auto',
+    height: 500,
+    width: 700,
+    [theme.breakpoints.down('sm')]: {
+      height: 300,
+      width: 250,
+    },
+  },
+  largeIframe: {
+    height: 500,
+    width: 700,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+  },
+  smallIframe: {
+    height: 300,
+    width: 250,
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
+  gmapCanvas: {
+    overflow: 'hidden',
+    background: 'none !important',
+  },
 });
 
 const Contact = ({ classes }) => {
@@ -49,6 +77,40 @@ const Contact = ({ classes }) => {
         <div className={classes.divider} />
         <Typography className={classes.text}>
           1005 S 300 W, Salt Lake City, UT 84101
+        </Typography>
+      </div>
+      <div className={classes.mapWrapper}>
+        <div className={classes.gmapCanvas}>
+          <iframe
+            src="https://maps.google.com/maps?q=1005%20S%20300%20W%2C%20Salt%20Lake%20City%2C%20UT%2084101&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            title="map"
+            className={classes.largeIframe}
+          />
+          <iframe
+            src="https://maps.google.com/maps?q=1005%20S%20300%20W%2C%20Salt%20Lake%20City%2C%20UT%2084101&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            title="map"
+            className={classes.smallIframe}
+          />
+        </div>
+      </div>
+      <h2>Rates</h2>
+      <div className={classes.wrapper}>
+        <Typography className={classes.text}>Facility Rental:</Typography>
+        <div className={classes.divider} />
+        <Typography className={classes.text}>
+          $800 / Full Day (10 hrs)
+        </Typography>
+        <div className={classes.divider} />
+        <Typography className={classes.text}>
+          $500 / Half Day (4 hrs)
         </Typography>
       </div>
     </Paper>

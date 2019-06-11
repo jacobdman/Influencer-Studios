@@ -40,24 +40,29 @@ class TabRouter extends Component {
         path: `/gallery`,
         component: Link,
       },
+      // {
+      //   label: 'WHAT WE DO',
+      //   path: `/about/studio`,
+      //   component: Link,
+      // },
+      // {
+      //   label: 'STUDIO SPECS',
+      //   path: `/specs`,
+      //   component: Link,
+      // },
+      // {
+      //   label: 'TESTIMONIALS',
+      //   path: `/testimonials`,
+      //   component: Link,
+      // },
       {
-        label: 'WHAT WE DO',
-        path: `/about/studio`,
-        component: Link,
-      },
-      {
-        label: 'STUDIO SPECS',
-        path: `/specs`,
-        component: Link,
-      },
-      {
-        label: 'TESTIMONIALS',
-        path: `/testimonials`,
-        component: Link,
-      },
-      {
-        label: 'CONTACT',
+        label: 'CONTACT / RATES',
         path: `/contact`,
+        component: Link,
+      },
+      {
+        label: 'ABOUT YOU',
+        path: `/about/you`,
         component: Link,
       },
       {

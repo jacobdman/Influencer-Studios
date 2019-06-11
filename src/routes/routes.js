@@ -1,6 +1,7 @@
 import Home from '../Components/Home/Home';
 import Gallery from '../Components/Gallery/Gallery';
 import Contact from '../Components/Contact/Contact';
+import AboutYou from '../Components/About/You';
 import Examples from '../Components/Examples/Examples';
 import Team from '../Components/About/Team';
 import Studio from '../Components/About/Studio';
@@ -20,6 +21,11 @@ const routes = [
   {
     path: '/gallery',
     component: Gallery,
+    exact: true,
+  },
+  {
+    path: '/about/you',
+    component: AboutYou,
     exact: true,
   },
   // {
