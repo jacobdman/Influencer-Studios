@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import StudioTheme from './StudioTheme';
@@ -9,6 +9,7 @@ const styles = theme => ({
   root: {
     width: '100%',
     height: '100%',
+    overflowX: 'hidden',
   },
   routeWrapper: {
     marginTop: 65,
@@ -28,20 +29,17 @@ const styles = theme => ({
   },
 });
 
-class App extends Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className={classes.root}>
-        <StudioTheme>
-          <div className={classes.routeWrapper}>
-            <Routes />
-          </div>
-        </StudioTheme>
-      </div>
-    );
-  }
-}
+const App = ({ classes }) => {
+  return (
+    <div className={classes.root}>
+      <StudioTheme>
+        <div className={classes.routeWrapper}>
+          <Routes />
+        </div>
+      </StudioTheme>
+    </div>
+  );
+};
 
 App.propTypes = {
   classes: PropTypes.object.isRequired,

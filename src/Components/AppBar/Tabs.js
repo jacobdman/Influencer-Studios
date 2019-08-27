@@ -2,21 +2,30 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
-  tabs: {
-    width: '100%',
+  buttons: {
     padding: '0 30px',
     color: '#fff',
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+    },
   },
-  tab: {
-    padding: 0,
+  button: {
     color: theme.typography.color,
     '& a': {
       color: theme.palette.primary,
     },
+    '& span': {
+      padding: '0 3px',
+    },
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  active: {
+    color: theme.palette.primary.main,
     '& span': {
       padding: '0 3px',
     },
@@ -36,18 +45,18 @@ class TabRouter extends Component {
         component: Link,
       },
       {
+        label: 'ABOUT YOU',
+        path: `/about/you`,
+        component: Link,
+      },
+      {
         label: 'GALLERY',
         path: `/gallery`,
         component: Link,
       },
       // {
-      //   label: 'WHAT WE DO',
-      //   path: `/about/studio`,
-      //   component: Link,
-      // },
-      // {
-      //   label: 'STUDIO SPECS',
-      //   path: `/specs`,
+      //   label: 'PARTNERS',
+      //   path: `/about/team`,
       //   component: Link,
       // },
       // {
@@ -56,46 +65,36 @@ class TabRouter extends Component {
       //   component: Link,
       // },
       {
-        label: 'CONTACT / RATES',
+        label: 'CONTACT / PRICING',
         path: `/contact`,
         component: Link,
       },
-      {
-        label: 'ABOUT YOU',
-        path: `/about/you`,
-        component: Link,
-      },
-      {
-        label: 'OUR TEAM',
-        path: `http://www.theshutterbrigade.com/`,
-        component: 'a',
-      },
-      {
-        label: 'HAIR/MAKE-UP',
-        path: `https://www.makeitupbykrista.com/`,
-        component: 'a',
-      },
+      // {
+      //   label: 'OUR TEAM',
+      //   path: `http://www.theshutterbrigade.com/`,
+      //   component: 'a',
+      // },
+      // {
+      //   label: 'HAIR/MAKE-UP',
+      //   path: `https://www.makeitupbykrista.com/`,
+      //   component: 'a',
+      // },
     ];
     return (
-      <Tabs
-        value={pathname}
-        className={classes.tabs}
-        indicatorColor="primary"
-        textColor="primary"
-        variant="scrollable"
-      >
+      <div className={classes.buttons}>
         {tabs.map(({ label, path, component }) => (
-          <Tab
+          <Button
             key={label}
             value={path}
-            label={label}
-            className={classes.tab}
+            className={path === pathname ? classes.active : classes.button}
             component={component}
             to={path}
             href={path}
-          />
+          >
+            {label}
+          </Button>
         ))}
-      </Tabs>
+      </div>
     );
   }
 }

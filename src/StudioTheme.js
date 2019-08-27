@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from './Components/AppBar/AppBar';
+import MobileAppBar from './Components/AppBar/MobileAppBar';
+import Footer from './Components/Footer/Footer';
 
 const theme = createMuiTheme({
   typography: {
@@ -19,6 +21,7 @@ const theme = createMuiTheme({
       // '#ccc',
       // '#fff',
       darkGrey: '#1b1b1b',
+      lightGrey: '#424242',
       default: '#eee',
       // paper: '#6d6d6d',
     },
@@ -34,33 +37,24 @@ const theme = createMuiTheme({
   },
   button: {
     '&': {
-      background: '#5e0e29',
+      background: '#D4A741',
       '&:hover': {
-        background: '#D4A741',
+        background: '#5e0e29',
       },
     },
   },
-  link: {
-    // textDecoration: 'none',
-    // '&': {
-    //   color: '#74CCC6',
-    //   '&:hover': {
-    //     color: '#2289D9',
-    //   },
-    // },
-  },
 });
 
-class StudioTheme extends Component {
-  render() {
-    return (
-      <MuiThemeProvider theme={theme}>
-        <AppBar />
-        <CssBaseline />
-        {this.props.children}
-      </MuiThemeProvider>
-    );
-  }
-}
+const StudioTheme = ({ forceHeader, children }) => {
+  return (
+    <MuiThemeProvider theme={theme}>
+      <AppBar forceHeader={forceHeader} />
+      <MobileAppBar forceHeader={forceHeader} />
+      <CssBaseline />
+      {children}
+      <Footer />
+    </MuiThemeProvider>
+  );
+};
 
 export default StudioTheme;

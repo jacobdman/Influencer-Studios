@@ -6,18 +6,18 @@ import 'react-image-lightbox/style.css';
 import Paper from '@material-ui/core/Paper';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import img from '../../Assets/IMG_0179.jpg';
-import img2 from '../../Assets/New_Cameras.jpg';
+import img from '../../Assets/E8D995AE-B313-484F-A068-66A1616A7C43.JPG';
+import img2 from '../../Assets/PurpleShot.jpeg';
 import img3 from '../../Assets/IMG_0034.jpg';
-import img4 from '../../Assets/Green_Room.jpg';
+import img4 from '../../Assets/LRM_EXPORT_23162973089027_20190728_195641050.jpeg';
 import img5 from '../../Assets/Cool_Camera_Rig.jpg';
 import img6 from '../../Assets/IMG_0180.jpg';
-import img7 from '../../Assets/Sound_Stage.jpg';
-import img8 from '../../Assets/Elle_Schneider.jpg';
-import img9 from '../../Assets/IMG_0006.jpg';
-import img10 from '../../Assets/Sigma_Lens.jpg';
-import img11 from '../../Assets/IMG_0164.jpg';
-import img12 from '../../Assets/IMG_0178.jpg';
+import img7 from '../../Assets/LRM_EXPORT_23176414817251_20190728_195654492.jpeg';
+import img8 from '../../Assets/LRM_EXPORT_23180043909594_20190728_195658121.jpeg';
+import img9 from '../../Assets/LRM_EXPORT_23187342167976_20190728_195705419.jpeg';
+import img10 from '../../Assets/LRM_EXPORT_23211438403696_20190728_195729516.jpeg';
+import img11 from '../../Assets/ProfileShot.JPG';
+import img12 from '../../Assets/IMG_0179.jpg';
 
 const styles = theme => ({
   root: {
