@@ -31,6 +31,14 @@ const styles = theme => ({
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
+  logo: {
+    height: '120%',
+    width: 'auto',
+    [theme.breakpoints.down('sm')]: {
+      width: '120%',
+      height: 'auto',
+    },
+  },
   menuIcon: {
     position: 'absolute',
     right: 50,
@@ -177,7 +185,7 @@ const Home = ({ classes }) => {
       >
         <Zoom in={true} timeout={2500}>
           <img
-            style={{ height: '120%' }}
+            className={classes.logo}
             alt="Name"
             src={require('../../Assets/Full_Logo.svg')}
           />

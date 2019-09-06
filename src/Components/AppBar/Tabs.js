@@ -54,11 +54,11 @@ class TabRouter extends Component {
         path: `/gallery`,
         component: Link,
       },
-      // {
-      //   label: 'PARTNERS',
-      //   path: `/about/team`,
-      //   component: Link,
-      // },
+      {
+        label: 'PARTNERS',
+        path: `/about/team`,
+        component: Link,
+      },
       // {
       //   label: 'TESTIMONIALS',
       //   path: `/testimonials`,

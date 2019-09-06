@@ -174,7 +174,7 @@ const Contact = ({ classes }) => {
         </div>
       </div>
       <div className={classes.socialMediaWrapper}>
-        <Typography style={{ color: '#fff', fontWeight: 500 }} variant="h7">
+        <Typography style={{ color: '#fff', fontWeight: 500 }}>
           Follow Us! @IgniteStudiosSLC
         </Typography>
         <FontAwesomeIcon

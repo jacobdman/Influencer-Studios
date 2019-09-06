@@ -1,62 +1,114 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Fade from '@material-ui/core/Fade';
+import shutter from '../../Assets/shutter.png';
+import makeup from '../../Assets/makeup.webp';
 
 const styles = theme => ({
-  paper: {
-    width: '80vw',
-    marginTop: 50,
-    marginBottom: 50,
-    padding: 50,
-    [theme.breakpoints.down('md')]: {
-      marginTop: 25,
-      marginBottom: 25,
-    },
-  },
-  text: {
-    fontSize: 20,
-  },
-  wrapper: {
+  root: {
+    width: '100vw',
+    padding: '50px 15px',
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    [theme.breakpoints.down('md')]: {
-      flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 0,
     },
   },
-  divider: {
-    height: 50,
-    width: 1,
-    backgroundColor: '#9b9b9b',
-    [theme.breakpoints.down('md')]: {
-      margin: '25px 0',
-      width: 200,
-      height: 1,
+  header: {
+    color: theme.palette.primary.main,
+    fontWeight: 600,
+  },
+  pageContent: {
+    width: '50vw',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 10px',
+      width: '100%',
+    },
+  },
+  partners: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    padding: '30px 10px',
+    width: '80vw',
+    [theme.breakpoints.down('sm')]: {
+      padding: '20px 10px',
+      width: '100%',
+    },
+  },
+  shutter: {
+    height: 150,
+    width: 350,
+    borderRadius: 10,
+    backgroundImage: `url(${shutter})`,
+    backgroundPosition: '50%',
+    backgroundColor: 'black',
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('sm')]: {
+      margin: '15px 0',
+    },
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
+  makeup: {
+    height: 150,
+    width: 350,
+    borderRadius: 10,
+    backgroundImage: `url(${makeup})`,
+    backgroundPosition: '50%',
+    backgroundColor: '#272727',
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.down('sm')]: {
+      margin: '15px 0',
+    },
+    '&:hover': {
+      cursor: 'pointer',
     },
   },
 });
 
-const Contact = ({ classes }) => {
+const Team = ({ classes }) => {
   return (
-    <Paper className={classes.paper}>
-      <div className={classes.wrapper}>
-        <Typography className={classes.text}>(801) 999-8249</Typography>
-        <div className={classes.divider} />
-        <Typography className={classes.text}>Info@IgniteStudios.com</Typography>
-        <div className={classes.divider} />
-        <Typography className={classes.text}>
-          1005 S 300 W, Salt Lake City, UT 84101
+    <div className={classes.root}>
+      <Fade in={true} timeout={2500}>
+        <Typography variant="h2" className={classes.header}>
+          Partners
+        </Typography>
+      </Fade>
+      <div className={classes.pageContent}>
+        <Typography className={classes.text} variant="h6">
+          Check out our awesome partners!
         </Typography>
       </div>
-    </Paper>
+      <Fade in={true} timeout={2500}>
+        <div className={classes.partners}>
+          <div
+            className={classes.shutter}
+            onClick={() =>
+              window.open('http://www.theshutterbrigade.com/', '_blank')
+            }
+          />
+          <div
+            className={classes.makeup}
+            onClick={() =>
+              window.open('https://www.makeitupbykrista.com/', '_blank')
+            }
+          />
+        </div>
+      </Fade>
+    </div>
   );
 };
 
-Contact.propTypes = {
+Team.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withRouter(withStyles(styles)(Contact));
+export default withStyles(styles)(Team);

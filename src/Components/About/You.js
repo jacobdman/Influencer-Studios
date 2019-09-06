@@ -11,6 +11,9 @@ const styles = theme => ({
     padding: '50px 15px',
     display: 'flex',
     flexDirection: 'column',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: 0,
+    },
   },
   youPageImageWrapper: {
     width: '100%',
@@ -46,7 +49,6 @@ const styles = theme => ({
     flexDirection: 'column',
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
-      marginTop: -150,
       padding: '0 10px',
     },
   },
@@ -72,32 +74,30 @@ const You = ({ classes }) => {
           </Typography>
         </Fade>
       </div>
-      <div>
-        <div className={classes.youPageContentWrapper}>
-          <Typography className={classes.youPageContent}>
-            ​No, no. You read the tab right. We're not here to tell you about
-            us. (Click on another tab for that goodness!) We genuinely want to
-            know about you! What is your passion project that needs a voice? You
-            have a story to tell and we want to help you tell it. Tell us what
-            you're searching for!
-            <br />
-            <br />
-            ​For now, we'll assume you're looking for a place to begin. Are you
-            an influencer? Podcaster? Coach? Trainer? Marketer?
-            <br />
-            <br />
-            ​If so, we have the facility and a wonderfully creative, personable
-            production team who will hold your hand (and stroke it occasionally)
-            through each phase of the process, while giving you a steady stream
-            of confidence to complete it in style.
-            <br />
-            <br />
-            ​Perhaps you just need an upscale place to present or host an event?
-            We can accommodate your audience or guests up to 125 people. Unless
-            they are sumo wrestlers, in which case...we'll need to chat.
-            (Because we're curious!)
-          </Typography>
-        </div>
+      <div className={classes.youPageContentWrapper}>
+        <Typography className={classes.youPageContent}>
+          ​No, no. You read the tab right. We're not here to tell you about us.
+          (Click on another tab for that goodness!) We genuinely want to know
+          about you! What is your passion project that needs a voice? You have a
+          story to tell and we want to help you tell it. Tell us what you're
+          searching for!
+          <br />
+          <br />
+          ​For now, we'll assume you're looking for a place to begin. Are you an
+          influencer? Podcaster? Coach? Trainer? Marketer?
+          <br />
+          <br />
+          ​If so, we have the facility and a wonderfully creative, personable
+          production team who will hold your hand (and stroke it occasionally)
+          through each phase of the process, while giving you a steady stream of
+          confidence to complete it in style.
+          <br />
+          <br />
+          ​Perhaps you just need an upscale place to present or host an event?
+          We can accommodate your audience or guests up to 125 people. Unless
+          they are sumo wrestlers, in which case...we'll need to chat. (Because
+          we're curious!)
+        </Typography>
       </div>
     </div>
   );
