@@ -105,7 +105,7 @@ const styles = theme => ({
 const rates = [
   {
     room: 'Soundstage',
-    time: 'Full Day (12hrs)',
+    time: 'Full Day (10hrs)',
     price: 800,
   },
   {

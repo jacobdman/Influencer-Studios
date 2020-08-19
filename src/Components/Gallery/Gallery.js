@@ -10,7 +10,7 @@ import Fade from '@material-ui/core/Fade';
 import img from '../../Assets/E8D995AE-B313-484F-A068-66A1616A7C43.JPG';
 import img2 from '../../Assets/LRM_EXPORT_23211438403696_20190728_195729516.jpeg';
 import img3 from '../../Assets/IMG_0034.jpg';
-import img4 from '../../Assets/LRM_EXPORT_23162973089027_20190728_195641050.jpeg';
+import img4 from '../../Assets/LRM_EXPORT_233926008106489_20190124_214550359.jpg';
 import img5 from '../../Assets/Cool_Camera_Rig.jpg';
 import img6 from '../../Assets/IMG_0180.jpg';
 import img7 from '../../Assets/LRM_EXPORT_23176414817251_20190728_195654492.jpeg';
