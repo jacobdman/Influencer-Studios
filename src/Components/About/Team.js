@@ -89,12 +89,12 @@ const Team = ({ classes }) => {
       </div>
       <Fade in={true} timeout={2500}>
         <div className={classes.partners}>
-          <div
+          {/* <div
             className={classes.shutter}
             onClick={() =>
               window.open('http://www.theshutterbrigade.com/', '_blank')
             }
-          />
+          /> */}
           <div
             className={classes.makeup}
             onClick={() =>
